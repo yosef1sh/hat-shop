@@ -1,0 +1,93 @@
+<!-- <div class="mat-app-background" [ngClass]="{'dark-theme-mode':isDarkTheme}">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'side' : 'side'"
+      [opened]="(isHandset$ | async) === true">
+      <mat-toolbar color="primary"></mat-toolbar>
+      <mat-nav-list>
+
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button type="button" aria-label="Togglen
+         sidenav" mat-icon-button (click)="drawer.toggle()">
+
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>My shopping cart</span>
+        <span class="example-spacer"></span>
+        <div>
+
+          <button mat-button aria-label="Example icon-button with menu icon">
+            <span mat-list-item [routerLink]="['/home']" routerLinkActive="router-link-active">home</span>
+          </button>
+      
+          <button mat-button aria-label="Example icon-button with menu icon">
+            <span mat-list-item [routerLink]="['/cart']" routerLinkActive="router-link-active">cart</span>
+          </button>
+          <button mat-button aria-label="Example icon-button with menu icon">
+            <span mat-list-item [routerLink]="['/sign-in']" routerLinkActive="router-link-active">signin</span>
+          </button>
+          <button mat-button aria-label="Example icon-button with menu icon">
+            <span mat-list-item [routerLink]="['/dashboard']" routerLinkActive="router-link-active">detail</span>
+          </button>
+          <mat-slide-toggle [(ngModel)]="isDarkTheme" (change)="storeThemeSelection()">
+           <mat-icon></mat-icon>
+         </mat-slide-toggle>
+        </div>
+      </mat-toolbar>
+      <mat-toolbar color="primary">
+    <button mat-button aria-label="Example icon-button with menu icon">
+            <span mat-list-item [routerLink]="['/prodects']" routerLinkActive="router-link-active">prodects</span>
+          </button>
+      </mat-toolbar>
+      
+     
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
+ -->
+
+
+<header>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/prodects']"
+              routerLinkActive="router-link-active">products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/cart']"
+              routerLinkActive="router-link-active">cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/sign-in']"
+              routerLinkActive="router-link-active">sign in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard']"
+              routerLinkActive="router-link-active">profile</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</header>

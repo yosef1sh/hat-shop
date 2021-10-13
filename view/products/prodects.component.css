@@ -1,0 +1,9 @@
+.content {
+    padding: 56px;
+    margin: 30px ;
+    margin-bottom: 100px;
+  }
+  
+  .content > mat-card {
+    width: 200px;
+  }
