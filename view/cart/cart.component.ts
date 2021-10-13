@@ -69,7 +69,7 @@ export class CartComponent implements OnInit {
   private initConfig(): void {
     this.payPalConfig = {
       currency: 'USD',
-      clientId: 'AWV8ior_0n2FRBLi-zkxz-RPVOwCoeOsKruW6fREF3LMk4g2P2TjNe6zKlp8PQ3KxpxPs3W--nFFwYEp',
+      clientId: '',
       createOrderOnClient: (data) => <ICreateOrderRequest>{
   
         intent: 'CAPTURE',
